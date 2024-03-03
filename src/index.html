@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" sizes="32*32" href="https://www.youtube.com/s/desktop/000d7185/img/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Get YouTube Subscribers</title>
+
+    <style>
+        /* Stylish background settings */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('./images/bg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        /* Stylish container for content */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: paleturquoise;
+        }
+
+        /* Stylish heading */
+        h1 {
+            margin-top: 5px;
+            color: #0c0c0c;
+            font-size: 36px;
+            white-space: nowrap;
+        }
+
+        /* Stylish button for subscribers */
+        button {
+            background-color: rgb(214, 9, 9);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Hover effect for the button */
+        button:hover {
+            background-color: pink;
+        }
+
+        /* Stylish input field for text */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #6754e5;
+            border-radius: 5px;
+        }
+
+        /* Stylish button for form submission */
+        button[type="submit"] {
+            background-color: #28a745;
+            transition: background-color 0.3s;
+        }
+
+        /* Hover effect for the submit button */
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        /* Flex container for responsiveness */
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Margin adjustment for smaller screens */
+        .flex-container input {
+            margin-right: 10px;
+        }
+
+        /* Stylish text for subscriber count */
+        .Subscribers {
+            color: #564045;
+            padding-left: 12rem;
+        }
+
+        /* Additional styles for smaller screens */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            input[type="text"] {
+                width: calc(100% - 20px);
+            }
+
+            .flex-container {
+                flex-direction: column;
+            }
+
+            .flex-container input {
+                margin: 10px 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- AlmaBetter logo -->
+    <img src="./images/alma.png" alt="AlmaBetter" style="width:20rem; margin-bottom: 20px;">
+
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Heading for the page -->
+        <h1>Get YouTube Subscribers</h1>
+
+        <!-- Buttons for different subscriber views -->
+        <button id="subscriberButton">Subscribers</button>
+        <button id="subscriberNameButton">Subscriber Name</button>
+
+        <!-- Input field and button for subscriber by ID -->
+        <div class="flex-container">
+            <input type="text" id="subscriberIdInput" placeholder="Enter ID">
+            <button id="subscriberIdButton">Subscriber ID</button>
+        </div>
+
+        <!-- Demo ID for reference -->
+        <h5><b> Demo id :- </b> ( 6543dc811dbc3525b01ac002 )</h5>
+
+        <!-- Button for accessing API Docs -->
+        <button style="color: rgb(237, 232, 232); background-color: #0c0c0c;" id="api-docs" target="_blank">API_Doc</button>
+    </div>
+
+    <!-- JavaScript to handle button clicks -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get a reference to the "Subscribers" button element
+            var subscribersButton = document.getElementById("subscriberButton");
+
+            // Get a reference to the "Subscriber by Name" button element
+            var subscriberNameButton = document.getElementById("subscriberNameButton");
+
+            // Get a reference to the "Subscriber by ID" button element
+            var subscriberIdButton = document.getElementById("subscriberIdButton");
+
+            // Get a reference to the "API Docs" button element with the correct id
+            var apiDocsButton = document.getElementById("api-docs");
+
+            // Add a click event listener to the "Subscribers" button
+            subscribersButton.addEventListener("click", function() {
+                // Redirect to "/subscribers"
+                window.location.href = "https://get-youtube-subscriber-zl5i.onrender.com/subscribers";
+            });
+
+            // Add a click event listener to the "Subscriber by Name" button
+            subscriberNameButton.addEventListener("click", function() {
+                // Redirect to "/subscribers/name"
+                window.location.href = "https://get-youtube-subscriber-zl5i.onrender.com/subscribers/name";
+            });
+
+            // Add a click event listener to the "Subscriber by ID" button
+            subscriberIdButton.addEventListener("click", function() {
+                // Get the value from the input field
+                var specificId = document.getElementById("subscriberIdInput").value;
+
+                // Check if the input is empty
+                if (specificId === "") {
+                    alert("Please enter an ID.");
+                } else {
+                    // Redirect to "/subscribers/:id" with the specific ID
+                    window.location.href = "https://get-youtube-subscriber-zl5i.onrender.com/subscribers/" + specificId;
+                }
+            });
+
+            // Add a click event listener to the "API Docs" button
+            apiDocsButton.addEventListener("click", function() {
+                // Open the API documentation link in a new tab
+                window.open("https://get-youtube-subscriber-zl5i.onrender.com/api-docs/", "_blank");
+            });
+        });
+    </script>
+</body>
+
+</html>

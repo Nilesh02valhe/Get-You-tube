@@ -1,0 +1,28 @@
+{
+  "name": "node-server-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha '__tests__/*.js' --reporter mochawesome --recursive  --timeout 60000 --exit",
+    "custom-test": "cd src && npx mocha test/app.test",
+    "build": "npm i",
+    "start": "node ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17.1",
+    "mochawesome": "6.1.1",
+    "swagger-jsdoc": "^6.0.0",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.4.0",
+    "mongodb-memory-server": "^7.1.1",
+    "mongoose": "^5.12.0",
+    "supertest": "^6.3.3"
+  }
+}
