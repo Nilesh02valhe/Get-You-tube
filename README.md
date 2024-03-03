@@ -58,9 +58,8 @@ Our project is backed by a MongoDB database to store your precious subscriber da
 We've thought ahead and included a data synchronization feature. The `refreshAll` function in `app.js` is at your service. It wipes the database clean and injects a sample dataset of subscribers from the `data.js` file. You can employ this function to effortlessly reset the database with sample data.
 
 ## Contributors
-Our project has been developed with love and dedication by:
+Our project has been developed by:
 
-- [Swapnil Kshirsagar]
-- [Manisha Dhole]
+- [Nilesh Valhe]
 
 We cordially invite you to contribute to this project or utilize it as a robust foundation for your own YouTube subscribers management application. Explore and experience the power of this API!
