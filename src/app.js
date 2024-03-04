@@ -118,7 +118,7 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: "https://get-youtube-subscriber-zl5i.onrender.com/",
+      url: "https://get-you-tube.onrender.com/",
     },
   ],
 };
